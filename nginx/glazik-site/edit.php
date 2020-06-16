@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <?php
-				include("verification.php");
-				if(isset($_SESSION['pseudo']) && $_SESSION['pseudo'] != "secretaire") die('Vous n\'avez pas les autorisations nécessaires pour accéder à cette partie du site');
+		        
+			if(isset($_SESSION['pseudo']) && $_SESSION['pseudo'] != "secretaire") die('Vous n\'avez pas les autorisations nécessaires pour accéder à cette partie du site');
 ?>
 <html>
 	<head>

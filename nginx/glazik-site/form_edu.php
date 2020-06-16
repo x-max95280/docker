@@ -1,7 +1,4 @@
 <!DOCTYPE HTML>
-<?php
-				include("verification.php");
-?>
 <html>
 	<head>
 		<title>Glazik</title>
