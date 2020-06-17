@@ -27,18 +27,24 @@ Il est possible de s'authentifier avec un compte sur le site :
 * Password: secret
 - Puis il est possible de créer un compte étudiant (remplir tout les champs ) et de se connecter avec celui-ci.
 
+## Exemple d'usages avec le site de rencontre
+
+Le site est disponible en https sur le port 444 : https://localhost:444
+
 ## Exemples d'usages avec Adminer
 
 > Vous pouvez vérifier la présence de l'utilisateur créer sur le site web.
 
-Adminer est accessible sur : http://localhost:81
+Adminer est accessible sur : http://localhost
 * Username: root
 * password: root
 * server: db
 * Database: glazik
 
 ## Release History
-
+* 0.2.2
+    * ADD: Ajout d'un Vhost love-life en mod ssl
+    * MODIFY : port 80 pour Adminer
 * 0.2.1
     * ADD: Création & installation du mod ssl au container nginx
 * 0.2.0

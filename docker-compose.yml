@@ -1,34 +1,35 @@
 version: '3.1'
-
 services:
   nginx:
     build: ./nginx
     ports:
-    - 80:80
     - 443:443
+    - 444:444
     volumes:
-        - ./nginx/glazik-site:/code
+        - ./nginx/glazik-site:/glazik
+        - ./nginx/love-life:/love-life
         - ./nginx/ssl:/etc/nginx/certs
     links:
         - php
   php:
     build: ./php
     volumes:
-        - ./nginx/glazik-site:/code
+        - ./nginx/glazik-site:/glazik
+        - ./nginx/love-life:/love-life
     links:
         - db
   adminer:
     image: adminer
     restart: always
     ports:
-      - 81:8080
+      - 80:8080
   db:
     image: mysql:5.6
     restart: always
     volumes: 
       - ./mysql:/var/lib/mysql
     environment:
-       MYSQL_ROOT_PASSWORD: root  
+       MYSQL_ROOT_PASSWORD: root
        MYSQL_DATABASE: glazik
        MYSQL_USER: root
        MYSQL_PASSWORD: root
