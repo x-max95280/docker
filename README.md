@@ -23,8 +23,8 @@ Windows:
 
 Le site est disponible en https : https://localhost
 Il est possible de s'authentifier avec un compte sur le site :
-Username: secretaire
-Password: secret
+* Username: secretaire
+* Password: secret
 - Puis il est possible de créer un compte étudiant (remplir tout les champs ) et de se connecter avec celui-ci.
 
 ## Exemples d'usages avec Adminer
@@ -32,10 +32,10 @@ Password: secret
 > Vous pouvez vérifier la présence de l'utilisateur créer sur le site web.
 
 Adminer est accessible sur : http://localhost:81
-Username: root
-password: root
-server: db
-Database: glazik
+* Username: root
+* password: root
+* server: db
+* Database: glazik
 
 ## Release History
 
@@ -51,9 +51,9 @@ Database: glazik
     * Déploiement & configuration
 
 ## Contribution
-> M3-Res-M1 Itescia
+* M3-Res-M1 Itescia
 
-> Maxime.C
-> Alexis.O
-> Sébastien.M
+* Maxime.C
+* Alexis.O
+* Sébastien.M
 
