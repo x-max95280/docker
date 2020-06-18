@@ -1,10 +1,19 @@
 version: '3.1'
 services:
+  glpi:
+    image: diouxx/glpi
+    container_name: glpi
+    hostname: glpi
+    ports:
+      - 81:80
+    volumes:
+      - ./glpi:/var/www/html/glpi
   nginx:
+    container_name: nginx
     build: ./nginx
     ports:
-    - 443:443
-    - 444:444
+      - 443:443
+      - 444:444
     volumes:
         - ./nginx/glazik-site:/glazik
         - ./nginx/love-life:/love-life
@@ -12,6 +21,7 @@ services:
     links:
         - php
   php:
+    container_name: php      
     build: ./php
     volumes:
         - ./nginx/glazik-site:/glazik
@@ -19,11 +29,13 @@ services:
     links:
         - db
   adminer:
+    container_name: adminer
     image: adminer
     restart: always
     ports:
       - 80:8080
   db:
+    container_name: db
     image: mysql:5.6
     restart: always
     volumes: 

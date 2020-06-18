@@ -5,7 +5,7 @@
 
 Linux :
 
-> Eteindre les containers actuellement run, il faut rendre disponible les ports 443 et 81.
+> Eteindre les containers actuellement run, il faut rendre disponible les ports 80,81,443,444
 
 ```sh
 sudo docker-compose down
@@ -31,6 +31,12 @@ Il est possible de s'authentifier avec un compte sur le site :
 
 Le site est disponible en https sur le port 444 : https://localhost:444
 
+## Exemple d'usages avec glpi
+
+Le site est disponible en http sur le port 81 : http://localhost:81
+* Login: glpi
+* Password: glpi
+
 ## Exemples d'usages avec Adminer
 
 > Vous pouvez vérifier la présence de l'utilisateur créer sur le site web.
@@ -42,6 +48,9 @@ Adminer est accessible sur : http://localhost
 * Database: glazik
 
 ## Release History
+* 0.2.3
+    * MODIFY Modification de love-life
+    * ADD Ajout du container GLPI & creation de la bd glpidb
 * 0.2.2
     * ADD: Ajout d'un Vhost love-life en mod ssl
     * MODIFY : port 80 pour Adminer
@@ -56,7 +65,7 @@ Adminer est accessible sur : http://localhost
 * 0.0.1
     * Déploiement & configuration
 
-## Contribution
+## Contributeurs
 * M3-Res-M1 Itescia
 
 * Maxime.C
